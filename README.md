@@ -1,5 +1,7 @@
 # CuriosityCorner
 A website dedicated to answer the questions that arises when we see and observe the beauty of the universe. To answer that 'WHY' factor.
+<br>
+<hr>
 
 ![Curiosity Corner Logo](WebsiteLogo.png)
 
