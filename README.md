@@ -51,12 +51,12 @@ curiosity-corner/
 
 1. **Clone or Download** the repository:
    ```bash
-   git clone https://github.com/yourusername/curiosity-corner.git
+   git clone https://github.com/ASAlokSharma/CuriosityCorner.git
    ```
 
 2. **Navigate** to the project folder:
    ```bash
-   cd curiosity-corner
+   cd CuriosityCorner
    ```
 
 3. **Open** `index.html` in your web browser:
