@@ -1,7 +1,7 @@
 # CuriosityCorner
 A website dedicated to answer the questions that arises when we see and observe the beauty of the universe. To answer that 'WHY' factor.
 
-![Curiosity Corner Logo](Website_Logo.png)
+![Curiosity Corner Logo](WebsiteLogo.png)
 
 **Complex Things, Simply Explained**
 
