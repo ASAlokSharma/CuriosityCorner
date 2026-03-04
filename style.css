@@ -388,3 +388,133 @@ footer p {
     font-size: 20px;
     font-weight: 600;
 }
+
+/* ════ YTHAEN STUDIO CREDIT (CURIOSITY CORNER EDITION) ════ */
+.ythaen-studio-credit {
+    background: linear-gradient(to bottom, #141414, #0a0a0a);
+    border-top: 2px solid #ab47bc; /* Nebula Purple */
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Figtree', sans-serif;
+    margin-top: 40px;
+}
+
+.ythaen-studio-credit::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(171, 71, 188, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.ysc-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Atom Animation */
+.ysc-visual { flex-shrink: 0; }
+.ysc-atom {
+    width: 100px; height: 100px;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.ysc-nucleus {
+    width: 55px; height: 55px;
+    background: radial-gradient(circle, rgba(171, 71, 188, 0.3), transparent 70%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    animation: atomPulse 2s infinite alternate ease-in-out;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(171, 71, 188, 0.5);
+}
+
+.ysc-logo { width: 35px; height: auto; object-fit: contain; }
+
+.ysc-orbits {
+    position: absolute; inset: 0;
+    animation: atomSpin 8s linear infinite;
+}
+
+.ysc-orbit {
+    position: absolute; inset: 0;
+    border: 1.5px solid rgba(0, 230, 118, 0.3); /* Bioluminescent Green */
+    border-radius: 50%;
+}
+
+.ysc-orbit::before {
+    content: ''; position: absolute;
+    top: -4px; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 6px;
+    background-color: #00e676;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00e676;
+}
+
+.ysc-orbit:nth-child(1) { transform: rotateZ(0deg) rotateX(70deg); }
+.ysc-orbit:nth-child(2) { transform: rotateZ(60deg) rotateX(70deg); }
+.ysc-orbit:nth-child(3) { transform: rotateZ(120deg) rotateX(70deg); }
+
+@keyframes atomPulse {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 30px rgba(171, 71, 188, 0.8); }
+}
+
+@keyframes atomSpin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Typography & Actions */
+.ysc-text { flex: 1; }
+.ysc-label {
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 3px; color: #b0b0b0; margin-bottom: 8px;
+}
+
+.ysc-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); 
+    font-weight: 800; letter-spacing: -1px; 
+    color: #ffffff; margin-bottom: 8px; line-height: 1;
+    display: flex; align-items: center; gap: 12px;
+}
+
+.ysc-inline-logo {
+    height: 1.1em; width: auto; object-fit: contain; margin-top: 2px;
+    filter: drop-shadow(0 0 8px rgba(171, 71, 188, 0.4));
+}
+
+.ysc-collab {
+    font-size: 1rem; font-weight: 400; color: #b0b0b0;
+}
+
+.ysc-collab strong { color: #e0e0e0; font-weight: 700; }
+
+.ysc-action { flex-shrink: 0; }
+.ysc-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px; border-radius: 50px;
+    background: rgba(171, 71, 188, 0.1);
+    border: 1px solid rgba(171, 71, 188, 0.4);
+    color: #ab47bc; font-size: 0.85rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    text-decoration: none; transition: all 0.3s ease;
+}
+
+.ysc-btn:hover {
+    background: #ab47bc; color: #141414;
+    box-shadow: 0 0 24px rgba(171, 71, 188, 0.4); transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .ysc-wrap { flex-direction: column; text-align: center; gap: 24px; }
+    .ysc-text { display: flex; flex-direction: column; align-items: center; }
+    .ysc-title { justify-content: center; }
+}
